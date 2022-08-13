@@ -1,0 +1,47 @@
+<!--pages/detail/detail.wxml-->
+<view class="header" style="padding-top: {{top}}px;"> 
+  <view class="left">
+    <van-icon name="arrow-left" style="margin-right: 10px" />
+    <text>|</text>
+    <van-icon name="wap-nav" style="margin-left: 10px"/>
+  </view>
+  <view class="center">
+    <van-icon name="search" style="margin: 0 0px 0 12px"/> 搜索嗨购商品
+  </view>
+</view>
+<swiper class="detailBanner"
+  bindchange="changeBanenr"
+>
+  <swiper-item 
+    class="detailBannerItem" 
+    wx:for="{{ banners }}" 
+    wx:key="*this"
+    current="{{current}}"
+    data-index="{{ index }}"
+    bindtap="previewImage"
+    >
+    <image src="{{ item }}" ></image>
+  </swiper-item>
+ 
+</swiper>
+<view class="tip">
+  <text>{{ current + 1 }}</text> / 
+  <text>{{ banners.length}}</text>
+</view>
+<view class="detailInfo">
+
+  <view class="price">
+    ¥
+    <text>{{ originprice }}</text>
+  </view>
+  <view class="title">
+    {{ proname }}
+  </view>
+</view>
+
+<van-goods-action>
+  <van-goods-action-icon icon="chat-o" text="客服" dot bindtap="openChat"/>
+  <van-goods-action-icon icon="cart-o" bindtap="toCart" text="购物车" info="5" />
+  <van-goods-action-button bindtap="addCartFn" text="加入购物车" type="warning" />
+  <van-goods-action-button text="立即购买" />
+</van-goods-action>

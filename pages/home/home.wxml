@@ -1,0 +1,32 @@
+<!--pages/home/home.wxml-->
+<view class="header" style="background:url(/resources/bg.webp) no-repeat ;padding-top: {{top}}px;">
+  <view class="adpic" style="color: aliceblue;">瓜分万元红包</view>
+  <view class="searchBox" animation="{{animation}}" bindtap="gotoSearch">
+    <van-icon class="searchIcon" name="search" />
+    <swiper class="searchSwiper" vertical autoplay circular>
+      <swiper-item>香水</swiper-item>
+      <swiper-item>手机</swiper-item>
+      <swiper-item>PS5</swiper-item>
+      <swiper-item>任天堂</swiper-item>
+    </swiper>
+    <van-button class="searchBtn" round type="danger">搜 索</van-button>
+  </view>
+  <view style="height: 30px;"></view>
+  <van-grid class="navList" column-num="5" border="{{false}}">
+    <van-grid-item wx:for="{{navList}}" wx:key="navid" icon="{{item.imgurl}}" text="{{item.title}}" />
+  </van-grid>
+  <view style="height:20px"></view>
+  <me-waterfall>
+    <me-waterfall-item wx:for="{{proList}}" wx:key="proid" data-proid="{{item.proid}}" bindtap="toDetail">
+      <image src="{{item.img1}}" style="height:200px;width:100%" />
+      <view style="background-color: #fff; margin-bottom:10px;padding:5px 8px">
+        {{item.proname}}
+        <view>￥{{item.originprice}}</view>
+      </view>
+    </me-waterfall-item>
+  </me-waterfall>
+
+  <view class="backTop" wx:if="{{scrollTop>300}}" bindtap="backtop">
+    <van-icon name="back-top" size="32" />
+  </view>
+</view>>

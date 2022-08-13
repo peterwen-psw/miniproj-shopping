@@ -1,0 +1,11 @@
+{
+ 
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
+    "van-tree-select": "@vant/weapp/tree-select/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "me-waterfall": "/components/lib/waterfall/index",
+    "me-waterfall-item": "/components/lib/waterfall-item/index"
+  }
+}

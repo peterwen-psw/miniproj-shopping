@@ -1,0 +1,41 @@
+<!--pages/fenlei/fenlei.wxml-->
+<!-- <text>pages/fenlei/fenlei.wxml</text> -->
+<view>搜索</view>
+<van-search value="{{ value }}" placeholder="请输入搜索关键词" />
+<view >
+<van-tree-select
+  items="{{ items }}"
+  main-active-index="{{ mainActiveIndex }}"
+  active-id="{{ activeId }}"
+  bind:click-nav="onClickNav"
+  bind:click-item="onClickItem"
+>
+<!-- <image  src="{{https://img.yzcdn.cn/vant/apple-1.jpg}}" slot="content" /> -->
+</van-tree-select>
+</view>
+<!-- <view class="box">
+  <van-tabs class="item" active="{{ active }}" bind:change="onChange">
+<view class="container">
+  <van-tab title="标签 1">内容 11111111111111</van-tab>
+  <van-tab title="标签 2">内容 2</van-tab>
+  <van-tab title="标签 3">内容 3</van-tab>
+  <van-tab title="标签 4">内容 4</van-tab>
+</view>
+</van-tabs></view>
+</view> -->
+
+<view class="nav">
+  <van-tabs active="{{ active }}" bind:change="onChange" >
+  <van-tab wx:for="{{list}}" title="{{item.brand}}" >
+  <view wx:for="{{arr}}" data-proid="{{item.proid}}" bindtap="toDetail">
+  <view>
+  <image src="{{item.img1}}"></image>
+  </view>
+  <view>
+  {{item.proname}}
+  </view>
+  </view>
+  </van-tab>
+</van-tabs>
+</view>
+

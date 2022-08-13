@@ -1,0 +1,13 @@
+
+.nav{
+  margin-top: -300px;
+  /* width: 200px; */
+  margin-left: 100px;
+  overflow-x: auto;
+}
+.aa{
+  display: flex;
+}
+.bb{
+  width: 20px;
+}

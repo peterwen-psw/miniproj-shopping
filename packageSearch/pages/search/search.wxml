@@ -1,0 +1,36 @@
+<!--packageSearch/pages/search/search.wxml-->
+<!-- <text>packageSearch/pages/search/search.wxml</text> -->
+<view class="top">
+  <van-icon name="arrow-left" />
+  <van-search value="{{ value }}" placeholder="请输入搜索关键词" bind:search="search" use-action-slot style="width: 90%;">
+    <view slot="action" bind:tap="onClick">搜索</view>
+  </van-search>
+</view>
+<view wx:if="{{flag}}">
+  <view>最近搜索</view>
+  <view>
+    <view class="box">
+      <view class="item" wx:for="{{list}}" data-item="{{item}}" bindtap="fuzhi">{{item}}</view>
+    </view>
+  </view>
+
+</view>
+<view wx:if="{{!flag}}">
+  <!-- <view wx:for="{{brr}}">
+<image src="{{item.img1}}"></image>
+<view>{{item.proname}}
+</view>
+
+</view> -->
+
+  <me-waterfall>
+    <me-waterfall-item wx:for="{{brr}}" wx:key="{{index}}" data-proid="{{item.proid}}" bindtap="toDetail">
+      <image src="{{item.img1}}" style="height: 200px;width:100%" />
+      <view style="background-color: #fff;margin-bottom: 10px;padding: 5px 8px;">
+        {{ item.proname }}
+        <view>¥{{ item.originprice }}</view>
+      </view>
+    </me-waterfall-item>
+  </me-waterfall>
+
+</view>

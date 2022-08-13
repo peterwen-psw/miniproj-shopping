@@ -1,0 +1,64 @@
+/* pages/detail/detail.wxss */
+.detailBanner {
+  height: 270px;
+}
+.detailBannerItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detailInfo {
+  width: 100%;
+  padding: 10px 12px;
+  box-sizing: border-box;
+}
+.price {
+  color: #f66;
+}
+.price text {
+  font-size: 20px;
+}
+.title {
+  font-weight: 600;
+}
+
+.tip {
+  position: absolute;
+  right: 0;
+  width: 50px;
+  height: 30px;
+  background-color: #efefef;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  border-radius: 15px 0 0 15px;
+}
+
+.header {
+  height: 44px;
+  background-color: #f66;
+  display: flex;
+}
+.left {
+  width: 90px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  margin: 6px 10px;
+  border-radius: 15px;
+
+}
+.center {
+  width: 40%;
+  height: 30px;
+  margin: 6px 10px 6px  0;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  color: #999;
+  line-height: 30px;
+}

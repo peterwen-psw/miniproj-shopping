@@ -1,0 +1,16 @@
+<!--packageUser/pages/register/step2.wxml-->
+<van-field
+    value="{{ telcode }}"
+    center
+    clearable
+    placeholder="输入验证码"
+    border="{{ false }}"
+    use-button-slot
+    bind:change="onChange"
+  >
+    <van-button slot="button" size="small" type="primary" bindtap="sendCode">
+      发送验证码
+    </van-button>
+  </van-field>
+
+  <van-button type="danger" block bindtap="checkCode">下一步</van-button>

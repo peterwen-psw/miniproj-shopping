@@ -1,0 +1,4 @@
+<!--packageUser/pages/register/step3.wxml-->
+<van-field value="{{ passowrd }}" placeholder="请输入密码" border="{{ false }}" bind:change="onChange" />
+
+<van-button type="danger" block bindtap="register">完成</van-button>

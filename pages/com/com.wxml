@@ -1,0 +1,5 @@
+<!--pages/com/com.wxml-->
+<my-com msg="{{message}}" bind:myevent="getData">
+  <view slot="header">你好啊</view>
+  <view slot="footer">我不好</view>
+</my-com>

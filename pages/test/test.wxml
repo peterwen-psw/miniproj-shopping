@@ -1,0 +1,25 @@
+<!--pages/test/test.wxml-->
+<view>{{message}}</view>
+<view id="item{{id}}">组件属性</view>
+<view wx:if="{{condition}}">控制属性</view>
+
+<view wx:for="{{list}}" wx:key="*this">{{item}}</view>
+<view wx:for="{{list1}}" wx:key="id">{{item.name}}</view>
+<!-- 模版 -->
+<template name="msgItem">
+  <view>
+    <text> {{index}}: {{msg}} </text>
+    <text> Time: {{time}} </text>
+  </view>
+</template>
+<template is="msgItem" data="{{ ...item }}"></template>
+
+<import src="item.wxml" />
+<template is="testItem" data="{{ index: 1, msg: 'hi', time: '2022-06-21' }}"></template>
+
+<include src="foot.wxml" />
+
+<button bindtap="changeMessage">改变message</button>
+<button data-val="测试" bindtap="changeMessageParams">改变message - 传参数</button>
+<input placeholder="用户名" value = "{{ username }}" bindinput="changeUsername"/> {{ username }}
+<input placeholder="密码" type="password" model:value="{{password}}" /> {{ password }}

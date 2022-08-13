@@ -1,0 +1,8 @@
+<!--components/mycom.wxml-->
+<view>
+  <slot name="header"></slot>
+  <view>子组件</view>
+  <slot name="footer"></slot>
+</view>
+<view>{{msg}}</view>
+<button bindtap="sendData">发送数据</button>

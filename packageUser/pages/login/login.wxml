@@ -1,0 +1,15 @@
+<!--packageUser/pages/login/login.wxml-->
+<van-field
+    value="{{ tel }}"
+    placeholder="请输入手机号"
+    border="{{ false }}"
+    bind:change="onTelChange"
+  />
+  <van-field
+    value="{{ password }}"
+    placeholder="请输入密码"
+    border="{{ false }}"
+    bind:change="onPasswordChange"
+  />
+  <van-button type="danger" block bindtap="login">登录</van-button>
+  <navigator url="/packageUser/pages/register/step1">注册</navigator>

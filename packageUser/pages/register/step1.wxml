@@ -1,0 +1,9 @@
+<!--packageUser/pages/register/step1.wxml-->
+<van-field
+    value="{{ tel }}"
+    placeholder="请输入手机号"
+    border="{{ false }}"
+    bind:change="onChange"
+  />
+
+  <van-button type="danger" block bindtap="checkTel">下一步</van-button>
